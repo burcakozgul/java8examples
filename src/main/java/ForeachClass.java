@@ -1,8 +1,8 @@
 import java.util.*;
 import java.util.function.Consumer;
 
-public class Foreach {
-    public void List () {
+public class ForeachClass {
+    public void example1 () {
         String[] array = new String[]{"B", "C", "A", "H", "D"};
         List name = Arrays.asList(array);
         name.stream().forEach(n -> System.out.println(n));
@@ -10,19 +10,20 @@ public class Foreach {
         name.stream().sorted().forEach(n -> System.out.println(n));
         System.out.println("----------------------------");
         name.stream().sorted(Comparator.reverseOrder()).forEach(n -> System.out.println(n));
-        System.out.println("----------------------------");
-
+    }
+    public void example2(){
         List<Integer> number = Arrays.asList(8, 6, 4, 9, 2, 1, 0, 3);
         number.stream().filter(n -> n % 2 == 0).forEach(n -> System.out.println(n));
 
     }
-    public void Map(){
-        Map<String,String> map2 = new HashMap<>();
-        map2.put("B","Burcak");
-        map2.put("C","Cem");
-        map2.put("A","Ahmet");
-        map2.forEach((k, v) -> System.out.println("key : "+k+" value : "+v));
-        System.out.println("----------------------------");
+    public void example3() {
+        Map<String, String> map2 = new HashMap<>();
+        map2.put("B", "Burcak");
+        map2.put("C", "Cem");
+        map2.put("A", "Ahmet");
+        map2.forEach((k, v) -> System.out.println("key : " + k + " value : " + v));
+    }
+    public void example4(){
 
         HashMap<String, Integer> map = new HashMap<>();
         map.put("A", 1);
